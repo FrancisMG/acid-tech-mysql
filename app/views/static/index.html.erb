@@ -1,0 +1,136 @@
+<%= render partial: "static/header"%>
+
+
+<section>
+	
+<div class="container latest-news">
+	<h1> Latest News</h1>
+	<% @articles.where(category_id: 1). each do |article| %>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6" style="padding:0;"> 
+				<div class="latest-news-row">
+					<%= link_to image_tag(article.avatar, class: "img-responsive article-image", style: "height: 301px; width: 100%; object-fit: cover;"), article %>
+					<div class="latest-news-article-title"> <h1 style="color: white; "> <%= article.text%></h1> </div>
+
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+</section>
+
+
+<section> 
+<div class="container gamers-hub">
+	
+	<h1>Tech News</h1>
+	<% @articles.where(category_id: 5). each do |article| %>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3"> 
+				<div style="margin-bottom: 50px;">
+					<div class="gamers-hub-row" >
+					<%= link_to image_tag(article.avatar, class: "img-responsive article-image", style: "height: 301px; width: 100%; object-fit: cover;"), article %>
+				</div>
+				<div class="article-title"> <h1 style="font-size: 20px;"> <%= article.text%></h1> 
+<h5> By: <%= article.author %></h5>
+				</div>
+				</div>
+				
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+</section>
+
+
+
+<section> 
+<div class="container gamers-hub">
+	
+	<h1>Gadget News</h1>
+	<% @articles.where(category_id: 4). each do |article| %>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3"> 
+				<div style="margin-bottom: 50px;">
+					<div class="gamers-hub-row" >
+					<%= link_to image_tag(article.avatar, class: "img-responsive article-image", style: "height: 301px; width: 100%; object-fit: cover;"), article %>
+				</div>
+				<div class="article-title"> <h1 style="font-size: 20px;"> <%= article.text%></h1> 
+<h5> By: <%= article.author %></h5>
+				</div>
+				</div>
+				
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+</section>
+
+
+
+<section> 
+<div class="container gamers-hub">
+	
+	<h1>Gamers Hub</h1>
+	<% @articles.where(category_id: 2). each do |article| %>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3"> 
+				<div style="margin-bottom: 50px;">
+					<div class="gamers-hub-row" >
+					<%= link_to image_tag(article.avatar, class: "img-responsive article-image", style: "height: 301px; width: 100%; object-fit: cover;"), article %>
+				</div>
+				<div class="article-title"> <h1 style="font-size: 20px;"> <%= article.text%></h1> 
+<h5> By: <%= article.author %></h5>
+				</div>
+				</div>
+				
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+</section>
+
+
+
+<section> 
+<div class="container gamers-hub">
+	
+	<h1>DIY</h1>
+	<% @articles.where(category_id: 3). each do |article| %>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3"> 
+				<div style="margin-bottom: 50px;">
+					<div class="gamers-hub-row" >
+					<%= link_to image_tag(article.avatar, class: "img-responsive article-image", style: "height: 301px; width: 100%; object-fit: cover;"), article %>
+				</div>
+				<div class="article-title"> <h1 style="font-size: 20px;"> <%= article.text%></h1> 
+<h5> By: <%= article.author %></h5>
+				</div>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+</section>
+
+
+<%= render partial: "static/footer"%>
+

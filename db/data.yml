@@ -1,0 +1,171 @@
+
+---
+admins:
+  columns:
+  - id
+  - first_name
+  - last_name
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - confirmation_token
+  - confirmed_at
+  - confirmation_sent_at
+  - unconfirmed_email
+  - failed_attempts
+  - unlock_token
+  - locked_at
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - ''
+    - ''
+    - van@fgcorporation.com
+    - "$2a$11$coMdyyM4qZ7RbzJw9lzDPObQucBvkJ0aDy1A3qIWNPwe5nXpNoTl6"
+    - 
+    - 
+    - '2017-09-28 17:13:56.975273'
+    - 2
+    - '2017-09-29 23:25:22.579361'
+    - '2017-09-28 17:13:57.023031'
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - '2017-09-28 17:10:44.977027'
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - '2017-09-28 17:10:45.263225'
+    - '2017-09-29 23:25:22.580641'
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2017-09-28 17:10:44.428956'
+    - '2017-09-28 17:10:44.428956'
+
+---
+categories:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - latest News
+    - '2017-09-28 17:10:44.938799'
+    - '2017-09-28 17:10:44.938799'
+  - - 2
+    - Gamers Hub
+    - '2017-09-28 17:10:44.966174'
+    - '2017-09-28 17:10:44.966174'
+  - - 3
+    - DIY
+    - '2017-09-28 17:10:44.968964'
+    - '2017-09-28 17:10:44.968964'
+  - - 4
+    - Gadget
+    - '2017-09-28 17:10:44.971528'
+    - '2017-09-28 17:10:44.971528'
+  - - 5
+    - Tech News
+    - '2017-09-28 17:10:44.974275'
+    - '2017-09-28 17:10:44.974275'
+  - - 6
+    - latest News
+    - '2017-09-28 17:11:03.998359'
+    - '2017-09-28 17:11:03.998359'
+  - - 7
+    - Gamers Hub
+    - '2017-09-28 17:11:04.001811'
+    - '2017-09-28 17:11:04.001811'
+  - - 8
+    - DIY
+    - '2017-09-28 17:11:04.003823'
+    - '2017-09-28 17:11:04.003823'
+  - - 9
+    - Gadget
+    - '2017-09-28 17:11:04.005942'
+    - '2017-09-28 17:11:04.005942'
+  - - 10
+    - Tech News
+    - '2017-09-28 17:11:04.008444'
+    - '2017-09-28 17:11:04.008444'
+
+---
+visits:
+  columns:
+  - id
+  - visit_token
+  - visitor_token
+  - ip
+  - user_agent
+  - referrer
+  - landing_page
+  - user_id
+  - referring_domain
+  - search_keyword
+  - browser
+  - os
+  - device_type
+  - screen_height
+  - screen_width
+  - country
+  - region
+  - city
+  - postal_code
+  - latitude
+  - longitude
+  - utm_source
+  - utm_medium
+  - utm_term
+  - utm_content
+  - utm_campaign
+  - started_at
+  records: 
+  - - 1
+    - 2acd32e1-e317-447b-b628-571db910a9e6
+    - 2d372ab2-965a-4008-ab50-e8db0fd1a58f
+    - 127.0.0.1
+    - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like
+      Gecko) Chrome/61.0.3163.100 Safari/537.36
+    - 
+    - http://localhost:3000/
+    - 1
+    - 
+    - 
+    - Chrome
+    - Mac OS X
+    - Desktop
+    - 
+    - 
+    - Reserved
+    - 
+    - 
+    - 
+    - '0.0'
+    - '0.0'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '2017-09-29 22:42:31.749015'

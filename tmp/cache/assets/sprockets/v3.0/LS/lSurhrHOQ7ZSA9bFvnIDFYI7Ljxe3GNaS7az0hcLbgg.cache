@@ -1,0 +1,7 @@
+I"[(function() {
+  jQuery(function() {});
+
+  $('#category').DataTable();
+
+}).call(this);
+:ET

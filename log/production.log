@@ -1,0 +1,18 @@
+W, [2017-09-29T11:48:03.354509 #2538]  WARN -- : DEPRECATION WARNING on line 12 of /Users/francismamarilgonzales/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap-mincer.scss:
+#{} interpolation near operators will be simplified in a future version of Sass.
+To preserve the current behavior, use quotes:
+
+  unquote("\"<%- asset_path(\"#{$path}\".replace(/[#?].*$/, '')) + \"#{$path}\".replace(/(^[^#?]*)([#?]?.*$)/, '$2') %>\"")
+
+You can use the sass-convert command to automatically fix most cases.
+
+
+W, [2017-09-29T11:48:03.355847 #2538]  WARN -- : DEPRECATION WARNING on line 16 of /Users/francismamarilgonzales/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap-mincer.scss:
+#{} interpolation near operators will be simplified in a future version of Sass.
+To preserve the current behavior, use quotes:
+
+  unquote('"<%- asset_path("#{$file}") %>"')
+
+You can use the sass-convert command to automatically fix most cases.
+
+

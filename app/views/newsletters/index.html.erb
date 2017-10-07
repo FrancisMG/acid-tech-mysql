@@ -1,0 +1,40 @@
+<div id="wrapper">
+
+  <%= render partial: 'dashboard/sidebar' %>
+
+  <div id="page-wrapper">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Newsletters</h1>
+
+    <table class="newsletter">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Action</th>
+          <th>Action</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @newsletters.each do |newsletter| %>
+        <tr>
+          <td><%= newsletter.email %></td>
+          <td><%= link_to 'Show', newsletter %></td>
+          <td><%= link_to 'Edit', edit_newsletter_path(newsletter) %></td>
+          <td><%= link_to 'Destroy', newsletter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Newsletter', new_newsletter_path %>
+
+
+  </div>
+  <!-- /#page-wrapper -->
+
+</div>

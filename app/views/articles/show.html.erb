@@ -1,0 +1,63 @@
+
+<%= render partial: "static/header"%>
+
+
+<p id="notice"><%= notice %></p>
+
+
+<section> 
+
+  <div  class="container" align="center">
+    <h1><%= @article.text %></h1>
+  </div>
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-6">
+    <div class="container" style="padding-bottom: 50px; padding-top: 50px;" align="right"> 
+      <% @article.tags.each do |tag| %>
+      <button type="button" class="btn btn-default btn-sm"  style="margin-bottom: 15px;"> <%= link_to tag.name, tag_path(tag) %></button>
+      <% end %>
+      <%= social_share_button_tag(@article.text) %>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<section> 
+<div class="container"> 
+  <div class="feature-image">
+    <%= image_tag(@article.avatar, class: "img-responsive") %>
+  </div>
+</div>
+</section>
+
+<section>
+  
+  <div class="container">
+   <p> <%= raw @article.content %></p>   
+ </div>
+
+</section>
+
+
+
+
+</div>
+
+<div class="container comment-post">
+  <%= render partial: 'articles/comment', collection: @article.comments %>
+</div>
+
+
+
+<div class="container comment-section">
+  <%= render partial: 'comments/form' %>
+</div>
+
+</section>
+
+
+

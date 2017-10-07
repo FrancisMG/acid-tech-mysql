@@ -1,0 +1,22 @@
+<%= render partial: "static/header"%>
+
+
+<section>
+	
+<div class="container latest-news">
+	<h1> Tech News</h1>
+	<% @articles.where(category_id: 5). each do |article| %>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6" style="padding:0;"> 
+				<div class="latest-news-row">
+					<%= link_to image_tag(article.avatar, class: "img-responsive article-image", style: "height: 301px; width: 100%; object-fit: cover;"), article %>
+					<div class="latest-news-article-title"> <h1 style="color: white; "> <%= article.text%></h1> </div>
+
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+</section>

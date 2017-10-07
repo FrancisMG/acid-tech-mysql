@@ -1,0 +1,29 @@
+
+
+<%= render partial: "static/header"%>
+
+<section> 
+<div class="container gamers-hub">
+	
+	<h1>Gamers Hub</h1>
+	<% @articles.where(category_id: 2). each do |article| %>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3"> 
+				<div style="margin-bottom: 50px;">
+					<div class="gamers-hub-row" >
+					<%= link_to image_tag(article.avatar, class: "img-responsive article-image", style: "height: 301px; width: 100%; object-fit: cover;"), article %>
+				</div>
+				<div class="article-title"> <h1 style="font-size: 20px;"> <%= article.text%></h1> 
+<h5> By: <%= article.author %></h5>
+				</div>
+				</div>
+				
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+</section>

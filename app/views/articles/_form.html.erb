@@ -1,0 +1,64 @@
+
+<%= form_with(model: article, local: true) do |form| %>
+<% if article.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+  <ul>
+    <% article.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="form-group">
+  <%= form.label :text %>
+  <%= form.text_field :text, id: :article_text, class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= form.label :author %>
+  <%= form.text_field :author, id: :article_author, class: "form-control" %>
+</div>
+
+
+<div class="form-group"> 
+ <%= image_tag(@article.avatar_url) if @article.avatar? %>
+ <%= form.file_field :avatar, class: "form-control" %>
+ <%= form.hidden_field :avatar_cache,class: "img-responsive" %>
+</div>
+
+
+<div class="form-group">
+  <%= form.label :tag_list %><br />
+  <%= form.text_field :tag_list, class: "form-control" %>
+</div>
+
+
+<div class="form-group">
+  <%= form.label :content %>
+  <%= form.cktext_area :content, id: :article_content , class: "form-control"%>
+</div>
+
+<div class="">
+  <%= form.label :category_id %>
+  <%= form.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true, class: "form-control" %>
+
+</div>
+
+<div class="form-group" style="padding-bottom: 50px; padding-top: 30px;" align="center">
+  <%= form.submit "Submit", class: "btn btn-primary" %>
+  <div>
+    <%= link_to 'Show', @article %> |
+    <%= link_to 'Back', articles_path %>
+
+  </div>
+  
+
+</div>
+<% end %>
+
+
+
+

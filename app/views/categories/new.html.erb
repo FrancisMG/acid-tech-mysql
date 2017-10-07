@@ -1,0 +1,15 @@
+<div id="wrapper">
+
+	<%= render partial: 'dashboard/sidebar' %>
+
+	<div id="page-wrapper">
+
+		<h1>New Category</h1>
+
+		<%= render 'form', category: @category %>
+
+		<%= link_to 'Back', categories_path %>
+	</div>
+	<!-- /#page-wrapper -->
+
+</div>
