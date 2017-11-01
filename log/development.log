@@ -53487,3 +53487,59 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 311ms (Views: 290.4ms | ActiveRecord: 7.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-01 14:16:05 +0800
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "visits" ("visit_token", "visitor_token", "ip", "user_agent", "landing_page", "browser", "os", "device_type", "country", "latitude", "longitude", "started_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["visit_token", "5c28db95-f76f-4a08-b136-b61a4869c496"], ["visitor_token", "2d372ab2-965a-4008-ab50-e8db0fd1a58f"], ["ip", "127.0.0.1"], ["user_agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"], ["landing_page", "http://localhost:3000/"], ["browser", "Chrome"], ["os", "Mac OS X"], ["device_type", "Desktop"], ["country", "Reserved"], ["latitude", "0.0"], ["longitude", "0.0"], ["started_at", "2017-11-01 06:16:06.075147"]]
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/_header.html.erb (10857.1ms)
+  [1m[36mArticle Load (15.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 5]]
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 4]]
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 3]]
+  Rendered static/_footer.html.erb (0.9ms)
+  Rendered static/index.html.erb within layouts/application (10920.0ms)
+  Rendered application/_favicon.html.erb (7.8ms)
+Completed 200 OK in 12793ms (Views: 12385.8ms | ActiveRecord: 73.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-11-01 14:17:19 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered dashboard/_sidebar.html.erb (1.2ms)
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.2ms)
+  Rendered application/_favicon.html.erb (7.2ms)
+Completed 200 OK in 337ms (Views: 260.5ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/dashboard/dashboard" for 127.0.0.1 at 2017-11-01 14:17:22 +0800
+Processing by DashboardController#dashboard as HTML
+  Parameters: {"page"=>"dashboard"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/dashboard.html.erb within layouts/application
+  Rendered dashboard/_sidebar.html.erb (0.9ms)
+  [1m[35m (38.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (started_at::timestamptz - INTERVAL '0 second') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 second') AT TIME ZONE 'Etc/UTC' AS date_trunc_day_started_at_timestamptz_interval_0_second_at_time FROM "visits" WHERE (started_at IS NOT NULL) GROUP BY (DATE_TRUNC('day', (started_at::timestamptz - INTERVAL '0 second') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 second') AT TIME ZONE 'Etc/UTC'[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "ahoy_events"."name" AS ahoy_events_name FROM "ahoy_events" GROUP BY "ahoy_events"."name"[0m
+  Rendered dashboard/dashboard.html.erb within layouts/application (136.4ms)
+  Rendered application/_favicon.html.erb (8.4ms)
+Completed 200 OK in 318ms (Views: 268.7ms | ActiveRecord: 44.1ms)
+
+
+Started GET "/dashboard/dashboard" for 127.0.0.1 at 2017-11-01 14:17:31 +0800
+Processing by DashboardController#dashboard as HTML
+  Parameters: {"page"=>"dashboard"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dashboard/dashboard.html.erb within layouts/application
+  Rendered dashboard/_sidebar.html.erb (1.0ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, (DATE_TRUNC('day', (started_at::timestamptz - INTERVAL '0 second') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 second') AT TIME ZONE 'Etc/UTC' AS date_trunc_day_started_at_timestamptz_interval_0_second_at_time FROM "visits" WHERE (started_at IS NOT NULL) GROUP BY (DATE_TRUNC('day', (started_at::timestamptz - INTERVAL '0 second') AT TIME ZONE 'Etc/UTC') + INTERVAL '0 second') AT TIME ZONE 'Etc/UTC'[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "ahoy_events"."name" AS ahoy_events_name FROM "ahoy_events" GROUP BY "ahoy_events"."name"[0m
+  Rendered dashboard/dashboard.html.erb within layouts/application (7.0ms)
+  Rendered application/_favicon.html.erb (7.8ms)
+Completed 200 OK in 190ms (Views: 183.2ms | ActiveRecord: 2.0ms)
+
+

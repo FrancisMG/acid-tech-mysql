@@ -11,20 +11,20 @@
 // about supported directives.
 //
 //= require jquery.turbolinks
-//= require turbolinks
-//= require ahoy
-//= require jquery
 //= require Chart.bundle
 //= require chartkick
+//= require ckeditor/init
+//= require turbolinks
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require ahoy
+//= require jquery
 //= require rails-ujs
 //= require articles.js
 //= require newsletters.js
 //= require contacts.js
 //= require categories.js
-//= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require bootstrap-sprockets
-//= require ckeditor/init
 //= require social-share-button
 //= require metismenu
 //= require_tree .
