@@ -14,12 +14,14 @@
 //= require Chart.bundle
 //= require chartkick
 //= require ckeditor/init
+
 //= require turbolinks
-//= require dataTables/jquery.dataTables
-//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+
 //= require ahoy
 //= require jquery
 //= require rails-ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require articles.js
 //= require newsletters.js
 //= require contacts.js
