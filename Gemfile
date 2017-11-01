@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'ckeditor', github: 'galetahub/ckeditor'
+gem 'ckeditor'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'social-share-button'
 gem 'autoprefixer-rails', '~> 7.1', '>= 7.1.4'
