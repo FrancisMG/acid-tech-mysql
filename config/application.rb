@@ -14,6 +14,9 @@ module Acidtech
     config.load_defaults 5.1
      config.assets.enabled = true
     config.serve_static_assets = true
+    config.assets.precompile += Ckeditor.assets
+config.assets.precompile += %w( ckeditor/* )
+config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
    
 
     # Settings in config/environments/* take precedence over those specified here.
