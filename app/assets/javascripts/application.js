@@ -14,9 +14,7 @@
 //= require Chart.bundle
 //= require chartkick
 //= require ckeditor/init
-
 //= require turbolinks
-
 //= require ahoy
 //= require jquery
 //= require rails-ujs

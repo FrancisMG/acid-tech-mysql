@@ -53814,3 +53814,56 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 249ms (Views: 227.5ms | ActiveRecord: 6.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-01 15:21:29 +0800
+  [1m[35m (22.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "visits" ("visit_token", "visitor_token", "ip", "user_agent", "landing_page", "browser", "os", "device_type", "country", "latitude", "longitude", "started_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["visit_token", "5c28db95-f76f-4a08-b136-b61a4869c496"], ["visitor_token", "2d372ab2-965a-4008-ab50-e8db0fd1a58f"], ["ip", "127.0.0.1"], ["user_agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"], ["landing_page", "http://localhost:3000/"], ["browser", "Chrome"], ["os", "Mac OS X"], ["device_type", "Desktop"], ["country", "Reserved"], ["latitude", "0.0"], ["longitude", "0.0"], ["started_at", "2017-11-01 07:21:29.905034"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering static/index.html.erb within layouts/application
+  Rendered static/_header.html.erb (2091.8ms)
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 1]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 5]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 4]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 2]]
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = $1[0m  [["category_id", 3]]
+  Rendered static/_footer.html.erb (0.9ms)
+  Rendered static/index.html.erb within layouts/application (2110.6ms)
+  Rendered application/_favicon.html.erb (6.4ms)
+Completed 200 OK in 2596ms (Views: 2409.2ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-11-01 15:21:38 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered dashboard/_sidebar.html.erb (1.3ms)
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.7ms)
+  Rendered application/_favicon.html.erb (6.1ms)
+Completed 200 OK in 203ms (Views: 158.5ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-11-01 15:21:40 +0800
+Processing by ArticlesController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered dashboard/_sidebar.html.erb (2.1ms)
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (8.4ms)
+  Rendered application/_favicon.html.erb (12.2ms)
+Completed 200 OK in 329ms (Views: 320.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-11-01 15:21:41 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered dashboard/_sidebar.html.erb (2.0ms)
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  Rendered articles/_form.html.erb (106.2ms)
+  Rendered articles/new.html.erb within layouts/application (116.0ms)
+  Rendered application/_favicon.html.erb (13.5ms)
+Completed 200 OK in 457ms (Views: 420.3ms | ActiveRecord: 14.7ms)
+
+
