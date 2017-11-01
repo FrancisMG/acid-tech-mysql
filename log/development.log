@@ -53867,3 +53867,16 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 457ms (Views: 420.3ms | ActiveRecord: 14.7ms)
 
 
+Started GET "/articles/new" for 127.0.0.1 at 2017-11-01 15:58:07 +0800
+  [1m[35m (16.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#new as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered dashboard/_sidebar.html.erb (2.1ms)
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."name" ASC[0m
+  Rendered articles/_form.html.erb (202.2ms)
+  Rendered articles/new.html.erb within layouts/application (209.6ms)
+  Rendered application/_favicon.html.erb (5.3ms)
+Completed 200 OK in 2865ms (Views: 2735.1ms | ActiveRecord: 20.3ms)
+
+
