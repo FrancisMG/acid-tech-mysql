@@ -6,6 +6,7 @@ Rails.application.config.assets.precompile += %w( ckeditor/*)
 Rails.application.config.assets.precompile += %w( application.js )
 Rails.application.config.assets.precompile += %w( application.scss )
 Rails.application.config.assets.precompile += %w( Chart.bundle.js )
+Rails.application.config.assets.precompile += %w(ckeditor/config.js)
 
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
