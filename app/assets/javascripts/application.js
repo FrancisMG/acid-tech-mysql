@@ -18,7 +18,9 @@
 //= require jquery
 //= require rails-ujs
 //= require chartkick
+//= require ckeditor/override
 //= require ckeditor/init
+
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require articles.js
